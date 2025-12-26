@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     # REPLACEME: Change this to your actual repository URL
-    repoURL: 'https://github.com/YOUR_USERNAME/study-devops.git'
+    repoURL: 'https://github.com/eyalvoulichman/study-devops.git'
     targetRevision: HEAD
     path: study-02/k8s
   destination:
