@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hit-counter-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # REPLACEME: Change this to your actual repository URL
+    repoURL: 'https://github.com/YOUR_USERNAME/study-devops.git'
+    targetRevision: HEAD
+    path: study-02/k8s
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
