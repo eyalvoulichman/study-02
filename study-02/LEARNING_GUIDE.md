@@ -61,6 +61,10 @@ We organized the project into two separate repositories for better security and 
 
 ---
 
-## 🚀 Phase 2 Preview: Continuous Integration (CI)
-Our next goal is to automate the image building process using **GitHub Actions** or **GitLab CI**. Instead of building the image on your laptop, the Git platform will do it for you every time you push code!
+## 🚀 Phase 2: Continuous Integration (CI)
+We automated the image building process using **GitHub Actions**. Instead of building the image on your laptop, GitHub does it for you every time you push code!
+*   **The Goal**: Automatically test code and build/push Docker images.
+*   **DevOps Concept**: **CI Pipeline**. We use a workflow that runs tests first; if they pass, it builds a Docker image and pushes it to **GitHub Container Registry (GHCR)**.
+*   **Versioning**: We use both `latest` and the `git-sha` as tags, so we can always go back to a specific version of the code.
+*   **Files**: `.github/workflows/ci.yml`, `test_app.py`.
 

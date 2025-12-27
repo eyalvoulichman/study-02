@@ -19,8 +19,8 @@ spec:
     spec:
       containers:
       - name: api-container
-        image: hit-counter-api:latest
-        imagePullPolicy: Never # Using local image for practice
+        image: ghcr.io/eyalvoulichman/study-02-api:latest
+        imagePullPolicy: Always # Always pull the latest version from GHCR
         ports:
         - containerPort: 8000
         env:
