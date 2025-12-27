@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Configure Redis connection from environment variables
 REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
-REDIS_PORT = int(os.getenv('REDIS_PORT', 6378))
+REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
 REDIS_DB = int(os.getenv('REDIS_DB', 0))
 
 # Initialize Redis client
